@@ -21,6 +21,6 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy:deploy-file -DgroupId="gov.va.wss.framework" -DartifactId="wss-framework-cache" -Dversion=${{ github.event.head_commit.message }} -Dtoken=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 -Dfile=./wss-framework-cache.jar -Durl=https://maven.pkg.github.com/timothy-baker2/private-maven-repo -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn deploy:deploy-file -DgroupId="gov.va.wss.framework" -DartifactId="wss-framework-cache" -Dversion=${{ github.event.head_commit.message }} -Dfile=./wss-framework-cache.jar -Durl=https://maven.pkg.github.com/timothy-baker2/private-maven-repo -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
